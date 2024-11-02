@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import useLocalStorage from './local-storage';
+import './index.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [theme, setTheme] = useLocalStorage("theme", "dark");
 
+  const handleToggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div
+      className={`main-container ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}
+    >
+      <button onClick={handleToggleTheme} className="toggle-theme-btn absolute top-8 right-10 bg-transparent border-none cursor-pointer">
+        {
+          theme === "dark" ? (
+            <FontAwesomeIcon icon={faSun} color="yellow" />
+          ) : (
+            <FontAwesomeIcon icon={faMoon} color="gray" />
+          )
+        }
+      </button>
+    </div>
+  );
+  
 }
 
-export default App
+export default App;
