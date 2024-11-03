@@ -13,15 +13,48 @@
   color: #ffffff;
 }
 
-
 .light-theme,
 .dark-theme {
   transition: background-color 0.3s, color 0.3s;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 20px;
 }
+
 .main-container {
-  position: relative;
-  height: 100vh;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  position: absolute;
+}
+
+.tree-view {
+  flex: 0 0 auto; 
+}
+
+.load-img-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.toggle-theme-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background: transparent;
+  border: none; 
+  cursor: pointer;
+  padding: 10px;
 }

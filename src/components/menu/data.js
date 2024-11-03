@@ -5,8 +5,8 @@ const menus = [
         children: [
             { label: "COATS", to: "/" },
             { label: "JACKETS", to: "/" },
-            { label: "DRESS AND JUMPSUITS", to: "/" },
-            { label: "SWEATERS AND CARDIGANS", to: "/" },
+            { label: "DRESS", to: "/" },
+            { label: "SWEATERS", to: "/" },
             { label: "JEANS", to: "/" },
             { label: "T-SHIRTS", to: "/" },
             { label: "TOPS", to: "/" },
@@ -20,13 +20,9 @@ const menus = [
         children: [
             { label: "COATS", to: "/" },
             { label: "JACKETS", to: "/" },
-            { label: "DRESS AND JUMPSUITS", to: "/" },
-            { label: "SWEATERS AND CARDIGANS", to: "/" },
+            { label: "SWEATERS", to: "/" },
             { label: "JEANS", to: "/" },
             { label: "T-SHIRTS", to: "/" },
-            { label: "TOPS", to: "/" },
-            { label: "SKIRTS", to: "/" },
-            { label: "SHORTS", to: "/" },
         ]
     },
     { 
@@ -35,12 +31,9 @@ const menus = [
         children: [
             { label: "COATS", to: "/" },
             { label: "JACKETS", to: "/" },
-            { label: "DRESS AND JUMPSUITS", to: "/" },
-            { label: "SWEATERS AND CARDIGANS", to: "/" },
+            { label: "SWEATERS", to: "/" },
             { label: "JEANS", to: "/" },
             { label: "T-SHIRTS", to: "/" },
-            { label: "TOPS", to: "/" },
-            { label: "SKIRTS", to: "/" },
             { label: "SHORTS", to: "/" },
         ]
     },
@@ -50,12 +43,10 @@ const menus = [
         children: [
             { label: "COATS", to: "/" },
             { label: "JACKETS", to: "/" },
-            { label: "DRESS AND JUMPSUITS", to: "/" },
-            { label: "SWEATERS AND CARDIGANS", to: "/" },
+            { label: "DRESS", to: "/" },
+            { label: "SWEATERS", to: "/" },
             { label: "JEANS", to: "/" },
             { label: "T-SHIRTS", to: "/" },
-            { label: "TOPS", to: "/" },
-            { label: "SKIRTS", to: "/" },
             { label: "SHORTS", to: "/" },
         ]
     },

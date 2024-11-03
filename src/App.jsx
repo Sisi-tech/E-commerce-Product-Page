@@ -5,6 +5,7 @@ import useLocalStorage from './local-storage';
 import './index.css'
 import TreeView from "./components/menu/";
 import menus from "./components/menu/data";
+import LoadImg from './components/load-img';
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "dark");
@@ -14,16 +15,21 @@ function App() {
   }
   return (
     <div className={`main-container ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
-      <button onClick={handleToggleTheme} className="toggle-theme-btn absolute p-4 right-4 bg-transparent border-none cursor-pointer">
-        {
-          theme === "dark" ? (
-            <FontAwesomeIcon icon={faSun} color="yellow" className='md:text-2xl sm:text-xl' />
-          ) : (
-            <FontAwesomeIcon icon={faMoon} color="gray" className='md:text-2xl sm:text-xl' />
-          )
-        }
-      </button>
-      <TreeView menus={menus}/>
+      <div className='header'>
+        <TreeView menus={menus}/>
+        <button onClick={handleToggleTheme} className="toggle-theme-btn">
+          {
+            theme === "dark" ? (
+              <FontAwesomeIcon icon={faSun} color="white" className='md:text-2xl sm:text-xl' />
+            ) : (
+              <FontAwesomeIcon icon={faMoon} color="gray" className='md:text-2xl sm:text-xl' />
+            )
+          }
+        </button>
+      </div>
+      <div className='load-img-container'>
+        <LoadImg />
+      </div>
     </div>
   );
   
